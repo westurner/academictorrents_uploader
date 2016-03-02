@@ -5,8 +5,7 @@ GUI for uploading to Academic Torrents.  You will need an account first.  Curren
 - Python 3
 - bencode module
 - PyQt5
-
-Eventually I will try to distribute a cross-platform executable to make this easier to use.
+- 
 
 Instructions
 ------------
