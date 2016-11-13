@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf8 -*-
 """
 = Credits =
   Robert Nitsch <r.s.nitsch+dev@gmail.com> - July 2010 (Version 1.0)
