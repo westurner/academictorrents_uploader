@@ -5,9 +5,13 @@ from torrent import make_torrent
 import os.path
 import re
 from base64 import b64encode
-from urllib.parse import urlencode
-from urllib.request import Request, urlopen
-from urllib.error import HTTPError
+if sys.version_info.major == 3:
+    from urllib.parse import urlencode
+    from urllib.request import Request, urlopen
+    from urllib.error import HTTPError
+else:
+    from urllib import urlencode
+    from urllib2 import Request, urlopen, HTTPError
 
 api_key_file = '.api_key.txt'
 my_torrent = None
