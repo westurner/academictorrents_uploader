@@ -3,6 +3,7 @@
 Copyright (C) 2010-2013 Robert Nitsch
 Licensed according to GPL v3.
 """
+from __future__ import print_function
 
 import datetime
 import hashlib
