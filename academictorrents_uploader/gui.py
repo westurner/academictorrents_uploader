@@ -16,11 +16,15 @@ else:
 api_key_file = '.api_key.txt'
 my_torrent = None
 
+here = os.path.dirname(os.path.realpath(__file__))
+at_uploader_ui_path = os.path.join(here, 'at_uploader.ui')
+
+
 class ATUploaderGui(QtWidgets.QMainWindow):
     def __init__(self):
         QtWidgets.QMainWindow.__init__(self)
- 
-        self.ui = uic.loadUi('at_uploader.ui')
+
+        self.ui = uic.loadUi(at_uploader_ui_path)
 
         # put api key in field if saved
         if os.path.isfile(api_key_file):
