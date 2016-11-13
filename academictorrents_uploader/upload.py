@@ -4,9 +4,13 @@ import json
 from base64 import b64encode
 from py3createtorrent import main as maketorrent
 from os.path import basename, exists
-from urllib.parse import urlencode
-from urllib.request import Request, urlopen
-from urllib.error import HTTPError
+if sys.version_info.major == 3:
+    from urllib.parse import urlencode
+    from urllib.request import Request, urlopen
+    from urllib.error import HTTPError
+else:
+    from urllib import urlencode
+    from urllib2 import Request, urlopen, HTTPError
 import re
 
 if len(sys.argv)!=9:
