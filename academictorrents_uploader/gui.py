@@ -154,7 +154,12 @@ class ATUploaderGui(QtWidgets.QMainWindow):
             print(response.read())            
         QtWidgets.QMessageBox.about(self, "Success", "You've uploaded!")
 
-if __name__ == "__main__":
+
+def main():
     app = QtWidgets.QApplication(sys.argv)
     win = ATUploaderGui()
-    sys.exit(app.exec_())
+    return app.exec_()
+
+
+if __name__ == "__main__":
+    sys.exit(main())
